@@ -15,7 +15,7 @@ jobs:
           - aarch64-unknown-linux-musl      # ARM Linux (musl)
 
     env:
-      BINARY_NAME: todo-cli-tool
+      BINARY_NAME: todo-cli-tools
 
     steps:
       - name: Checkout code
