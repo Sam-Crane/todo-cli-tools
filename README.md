@@ -1,11 +1,11 @@
 # 1. Intoduction
 
-# Todo CLI Tool
+## Todo CLI Tool
 
 The **Todo CLI Tool** is a cross-platform, statically linked command-line application designed to help professionals manage tasks and reminders efficiently. With Google Calendar integration and recurring task support, the tool is perfect for staying organized on Linux, Windows, and Mac.
 
 
-## 2. Usage Instructions
+# 2. Usage Instructions
 
 ### Add a New Task
 Add a task with specific start and end times, and optionally make it recurring:
@@ -24,7 +24,7 @@ todo_task --help
 
 ---
 
-#### **3. Target Group Benefits**
+# **3. Target Group Benefits**
 ```markdown
 ```
 ## Target Group Benefits
