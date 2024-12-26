@@ -4,12 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo CLI Tool</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+        }
+        code {
+            color: #e74c3c;
+        }
+    </style>
 </head>
 <body>
+
     <header>
         <h1>Todo CLI Tool</h1>
-        <p>Your simple and efficient task management solution</p>
+        <p>
+            The <strong>Todo CLI Tool</strong> is a cross-platform, statically linked command-line application designed
+            to help professionals manage tasks and reminders efficiently. With Google Calendar integration and recurring
+            task support, the tool is perfect for staying organized on Linux, Windows, and Mac.
+        </p>
+        <img src="path-to-hero-image.png" alt="Hero Image" style="max-width: 100%; height: auto;"> <!-- Replace with actual image -->
     </header>
     <section>
         <h2>Features</h2>
@@ -20,8 +51,84 @@
             <li>Integration with Google Calendar</li>
         </ul>
     </section>
+
+    <section>
+        <h2>Usage Instructions</h2>
+        <h3>Add a New Task</h3>
+        <pre>
+<code>todo-cli-tool add --title "Team Meeting" --details "Discuss project updates" --start_time "2024-12-31T15:00:00Z" --end_time "2024-12-31T16:00:00Z" --recurring --frequency_minutes 1440</code>
+        </pre>
+
+        <h3>List All Tasks</h3>
+        <pre>
+<code>todo-cli-tool list</code>
+        </pre>
+
+        <h3>Help</h3>
+        <pre>
+<code>todo-cli-tool --help</code>
+        </pre>
+    </section>
+
+    <section>
+        <h2>Target Group Benefits</h2>
+        <p>This tool is ideal for:</p>
+        <ul>
+            <li><strong>Busy Professionals</strong>: Simplifies task management with automated reminders and recurring tasks.</li>
+            <li><strong>Students</strong>: Stay on top of assignments, study schedules, and personal goals.</li>
+            <li><strong>Healthcare Workers</strong>: Manage recurring tasks like medication schedules.</li>
+        </ul>
+        <h3>Key Features:</h3>
+        <ol>
+            <li><strong>Automated Reminders</strong>:
+                <ul>
+                    <li>Get notified 5 minutes before a task starts.</li>
+                    <li>Receive a final reminder 2 minutes before the task ends.</li>
+                </ul>
+            </li>
+            <li><strong>Recurring Task Support</strong>: Easily manage repeated activities, such as daily stand-ups or prescription schedules.</li>
+            <li><strong>Google Calendar Integration</strong>: Synchronize tasks with Google Calendar for seamless access across devices.</li>
+            <li><strong>Cross-Platform</strong>: Works on Linux, Windows, and MacOS.</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Download</h2>
+        <p>Download the pre-built binaries for your platform:</p>
+        <ul>
+            <li><a href="https://github.com/your-repo/releases/download/v1.0.0/todo-cli-tool-linux.tar.gz">Linux (x86_64)</a></li>
+            <li><a href="https://github.com/your-repo/releases/download/v1.0.0/todo-cli-tool-arm64.tar.gz">Linux (ARM64)</a></li>
+            <li><a href="https://github.com/your-repo/releases/download/v1.0.0/todo-cli-tool-windows.zip">Windows</a></li>
+            <li><a href="https://github.com/your-repo/releases/download/v1.0.0/todo-cli-tool-macos.tar.gz">MacOS</a></li>
+        </ul>
+        <h3>Installation</h3>
+        <p>After downloading, extract the binary and move it to a directory in your <code>PATH</code>:</p>
+        <pre>
+<code># Example for Linux
+tar -xvf todo-cli-tool-linux.tar.gz
+sudo mv todo-cli-tool /usr/local/bin/</code>
+        </pre>
+    </section>
+
+    <section>
+        <h2>Contributions</h2>
+        <p>We welcome contributions to improve the Todo CLI Tool! Feel free to open issues or submit pull requests.</p>
+        <h3>How to Contribute</h3>
+        <ol>
+            <li>Fork the repository.</li>
+            <li>Create a feature branch: <code>git checkout -b feature-name</code>.</li>
+            <li>Commit your changes: <code>git commit -m "Add feature-name"</code>.</li>
+            <li>Push to the branch: <code>git push origin feature-name</code>.</li>
+            <li>Open a pull request.</li>
+        </ol>
+        <h3>Issues</h3>
+        <p>If you encounter any bugs or have feature suggestions, please <a href="https://github.com/your-repo/issues">open an issue</a>.</p>
+    </section>
+
     <footer>
-        <p>© 2024 Todo CLI Tool</p>
+        <h2>License</h2>
+        <p>This project is licensed under the MIT License. See the <a href="LICENSE">LICENSE</a> file for details.</p>
     </footer>
+
 </body>
 </html>
