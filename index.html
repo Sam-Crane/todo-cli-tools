@@ -10,14 +10,35 @@
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 20px;
-        }
-
-        h1, h2, h3 {
+            background-color: #f8f9fa;
             color: #2c3e50;
         }
 
+        header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header p {
+            margin: 10px 0 0;
+        }
+
+        h2 {
+            color: #2980b9;
+        }
+
+        h3 {
+            color: #16a085;
+        }
+
         a {
-            color: #3498db;
+            color: #e74c3c;
             text-decoration: none;
         }
 
@@ -27,44 +48,72 @@
 
         pre {
             background: #f4f4f4;
-            padding: 10px;
+            padding: 15px;
             border: 1px solid #ddd;
+            border-radius: 5px;
             overflow-x: auto;
+            font-family: "Courier New", monospace;
         }
 
         code {
-            color: #e74c3c;
+            color: #e67e22;
         }
 
         .collapsible {
             cursor: pointer;
-            padding: 10px;
+            padding: 15px;
             border: none;
-            background-color: #f4f4f4;
+            background-color: #3498db;
+            color: white;
             text-align: left;
             outline: none;
             font-size: 1.1rem;
+            border-radius: 5px;
+            margin-bottom: 10px;
             transition: background-color 0.3s ease;
         }
 
         .collapsible:hover {
-            background-color: #ddd;
+            background-color: #2980b9;
         }
 
         .content {
-            padding: 0 10px;
+            padding: 10px 20px;
             display: none;
             overflow: hidden;
+            background-color: #ecf0f1;
+            border-left: 3px solid #3498db;
+            border-radius: 5px;
+            margin-bottom: 10px;
         }
 
         .task-input {
             margin-bottom: 15px;
+            display: flex;
         }
 
-        .task-input input, .task-input button {
+        .task-input input {
             padding: 10px;
+            flex: 1;
+            border: 1px solid #ddd;
+            border-radius: 5px;
             font-size: 1rem;
             margin-right: 5px;
+        }
+
+        .task-input button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #16a085;
+            color: white;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .task-input button:hover {
+            background-color: #138d75;
         }
 
         #task-list {
@@ -76,6 +125,7 @@
             padding: 10px;
             background: #f9f9f9;
             border: 1px solid #ddd;
+            border-radius: 5px;
             margin-bottom: 5px;
         }
     </style>
