@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,120 +11,188 @@
             line-height: 1.6;
             margin: 20px;
         }
+
         h1, h2, h3 {
             color: #2c3e50;
         }
+
         a {
             color: #3498db;
             text-decoration: none;
         }
+
         a:hover {
             text-decoration: underline;
         }
+
         pre {
             background: #f4f4f4;
             padding: 10px;
             border: 1px solid #ddd;
             overflow-x: auto;
         }
+
         code {
             color: #e74c3c;
         }
+
+        .collapsible {
+            cursor: pointer;
+            padding: 10px;
+            border: none;
+            background-color: #f4f4f4;
+            text-align: left;
+            outline: none;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .collapsible:hover {
+            background-color: #ddd;
+        }
+
+        .content {
+            padding: 0 10px;
+            display: none;
+            overflow: hidden;
+        }
+
+        .task-input {
+            margin-bottom: 15px;
+        }
+
+        .task-input input, .task-input button {
+            padding: 10px;
+            font-size: 1rem;
+            margin-right: 5px;
+        }
+
+        #task-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #task-list li {
+            padding: 10px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            margin-bottom: 5px;
+        }
     </style>
 </head>
+
 <body>
 
     <header>
         <h1>Todo CLI Tool</h1>
         <p>
-            The <strong>Todo CLI Tool</strong> is a cross-platform, statically linked command-line application designed
-            to help professionals manage tasks and reminders efficiently. With Google Calendar integration and recurring
-            task support, the tool is perfect for staying organized on Linux, Windows, and Mac.
+            The <strong>Todo CLI Tool</strong> helps manage tasks and reminders efficiently with features like Google Calendar
+            integration and recurring task support. Stay organized on Linux, Windows, and Mac.
         </p>
-       
     </header>
+
     <section>
-        <h2>Features</h2>
-        <ul>
-            <li>Manage tasks with reminders</li>
-            <li>Recurring task support</li>
-            <li>Cross-platform support</li>
-            <li>Integration with Google Calendar</li>
-        </ul>
+        <button class="collapsible">Features</button>
+        <div class="content">
+            <ul>
+                <li>Manage tasks with reminders</li>
+                <li>Recurring task support</li>
+                <li>Cross-platform support</li>
+                <li>Integration with Google Calendar</li>
+            </ul>
+        </div>
     </section>
 
     <section>
-        <h2>Usage Instructions</h2>
-        <h3>Add a New Task</h3>
-        <pre>
+        <button class="collapsible">Usage Instructions</button>
+        <div class="content">
+            <h3>Add a New Task</h3>
+            <pre>
 <code>todo_task add --title "Team Meeting" --details "Discuss project updates" --start_time "2024-12-31T15:00:00Z" --end_time "2024-12-31T16:00:00Z" --recurring --frequency_minutes 1440</code>
-        </pre>
-
-        <h3>List All Tasks</h3>
-        <pre>
+            </pre>
+            <h3>List All Tasks</h3>
+            <pre>
 <code>todo_task list</code>
-        </pre>
-
-        <h3>Help</h3>
-        <pre>
+            </pre>
+            <h3>Help</h3>
+            <pre>
 <code>todo_task --help</code>
-        </pre>
+            </pre>
+        </div>
     </section>
 
     <section>
-        <h2>Target Group Benefits</h2>
-        <p>This tool is ideal for:</p>
-        <ul>
-            <li><strong>Busy Professionals</strong>: Simplifies task management with automated reminders and recurring tasks.</li>
-            <li><strong>Students</strong>: Stay on top of assignments, study schedules, and personal goals.</li>
-            <li><strong>Healthcare Workers</strong>: Manage recurring tasks like medication schedules.</li>
-        </ul>
-        <h3>Key Features:</h3>
-        <ol>
-            <li><strong>Automated Reminders</strong>:
-                <ul>
-                    <li>Get notified 5 minutes before a task starts.</li>
-                    <li>Receive a final reminder 2 minutes before the task ends.</li>
-                </ul>
-            </li>
-            <li><strong>Recurring Task Support</strong>: Easily manage repeated activities, such as daily stand-ups or prescription schedules.</li>
-            <li><strong>Google Calendar Integration</strong>: Synchronize tasks with Google Calendar for seamless access across devices.</li>
-            <li><strong>Cross-Platform</strong>: Works on Linux, Windows, and MacOS.</li>
-        </ol>
+        <button class="collapsible">Interactive Task Manager</button>
+        <div class="content">
+            <div class="task-input">
+                <input type="text" id="task-input" placeholder="Enter a task">
+                <button onclick="addTask()">Add Task</button>
+            </div>
+            <ul id="task-list"></ul>
+        </div>
     </section>
 
     <section>
-        <h2>Download</h2>
-        <p>Download the pre-built binaries for your platform:</p>
-        <ul>
-            <li><a href="https://github.com/Sam-Crane/todo-cli-tools/releases/download/v1.0.0/todo-cli-tools-linux.tar.gz">Linux (x86_64)</a></li>
-            <li><a href="https://github.com/Sam-Crane/todo-cli-tools/releases/download/v1.0.0/todo-cli-tools-arm64.tar.gz">Linux (ARM64)</a></li>
-            <li><a href="https://github.com/Sam-Crane/todo-cli-tools/releases/download/v1.0.0/todo-cli-tools-windows.zip">Windows</a></li>
-            <li><a href="https://github.com/Sam-Crane/todo-cli-tools/releases/download/v1.0.0/todo-cli-tools-macos.tar.gz">MacOS</a></li>
-        </ul>
-        <h3>Installation</h3>
-        <p>After downloading, extract the binary and move it to a directory in your <code>PATH</code>:</p>
-        <pre>
+        <button class="collapsible">Download</button>
+        <div class="content">
+            <p>Download the pre-built binaries for your platform:</p>
+            <ul>
+                <li><a href="#">Linux (x86_64)</a></li>
+                <li><a href="#">Linux (ARM64)</a></li>
+                <li><a href="#">Windows</a></li>
+                <li><a href="#">MacOS</a></li>
+            </ul>
+            <h3>Installation</h3>
+            <pre>
 <code># Example for Linux
 tar -xvf todo-cli-tools-linux.tar.gz
 sudo mv todo_task /usr/local/bin/</code>
-        </pre>
+            </pre>
+        </div>
     </section>
 
     <section>
-        <h2>Contributions</h2>
-        <p>We welcome contributions to improve the Todo CLI Tool! Feel free to open issues or submit pull requests.</p>
-        <h3>How to Contribute</h3>
-        <ol>
-            <li>Fork the repository.</li>
-            <li>Create a feature branch: <code>git checkout -b feature-name</code>.</li>
-            <li>Commit your changes: <code>git commit -m "Add feature-name"</code>.</li>
-            <li>Push to the branch: <code>git push origin feature-name</code>.</li>
-            <li>Open a pull request.</li>
-        </ol>
-        <h3>Issues</h3>
-        <p>If you encounter any bugs or have feature suggestions, please <a href="https://github.com/Sam-Crane/todo-cli-tools/issues">open an issue</a>.</p>
+        <button class="collapsible">Contributions</button>
+        <div class="content">
+            <p>We welcome contributions to improve the Todo CLI Tool! Feel free to open issues or submit pull requests.</p>
+            <h3>How to Contribute</h3>
+            <ol>
+                <li>Fork the repository.</li>
+                <li>Create a feature branch: <code>git checkout -b feature-name</code>.</li>
+                <li>Commit your changes: <code>git commit -m "Add feature-name"</code>.</li>
+                <li>Push to the branch: <code>git push origin feature-name</code>.</li>
+                <li>Open a pull request.</li>
+            </ol>
+            <h3>Issues</h3>
+            <p>If you encounter any bugs or have feature suggestions, please <a href="#">open an issue</a>.</p>
+        </div>
     </section>
 
+    <script>
+        // Toggle collapsible sections
+        const collapsibles = document.querySelectorAll(".collapsible");
+        collapsibles.forEach(collapsible => {
+            collapsible.addEventListener("click", function () {
+                this.classList.toggle("active");
+                const content = this.nextElementSibling;
+                content.style.display = content.style.display === "block" ? "none" : "block";
+            });
+        });
+
+        // Add task to the interactive task manager
+        function addTask() {
+            const taskInput = document.getElementById("task-input");
+            const taskList = document.getElementById("task-list");
+
+            if (taskInput.value.trim() !== "") {
+                const listItem = document.createElement("li");
+                listItem.textContent = taskInput.value;
+                taskList.appendChild(listItem);
+                taskInput.value = "";
+            }
+        }
+    </script>
+
 </body>
+
 </html>
