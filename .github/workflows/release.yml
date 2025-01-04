@@ -21,8 +21,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Install Rust
-        uses: dtolnay/rust-toolchain@stable
+      - name: Install Rust (Nightly)
+        uses: dtolnay/rust-toolchain@nightly
 
       - name: Install Cross
         run: cargo install cross
