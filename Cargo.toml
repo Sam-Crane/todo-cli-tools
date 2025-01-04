@@ -2,9 +2,29 @@
 name = "todo_task"
 version = "0.1.0"
 edition = "2024"
+authors = ["Samson Oluwafemi Olawole"]
+description = "A CLI tool for task management integrated with Google Calendar"
+license = "None"
+repository = "https://github.com/your_username/todo_task"
+
+[workspace]
+resolver = "2"
+
+
 
 [dependencies]
+hyper = { version = "1.5.2", features = ["full"] }
+hyper-rustls = "0.27.5"
+hyper-util = { version = "0.1", features = ["client"] }
+yup-oauth2 = "11.0.0"
+google-calendar3 = { version = "6.0.0", features = ["yup-oauth2"] }
 tokio = { version = "1", features = ["full"] }
 serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
 clap = { version = "4.0", features = ["derive"]}
 chrono = { version = "0.4", features = ["serde"] }
+openssl = { version = "0.10", optional = true }
+openssl-sys = { version = "0.9.74", features = ["vendored"], optional = true }
+
+
+
